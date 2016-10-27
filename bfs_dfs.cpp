@@ -67,3 +67,8 @@ void insert(int v1, int v2){
 	}
 
 }
+
+/* Lista de Adjancencia em c++:
+->Podemos fazer uma lista de adjacências com um vector<vi>, usando vec.size() e como um array bidimensional
+que torna a implementação mais simples
+*/
