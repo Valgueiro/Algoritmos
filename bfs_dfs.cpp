@@ -45,7 +45,7 @@ void dfs(int v){//better to Edge classification, find cycles and Topological sor
 }
 
 /*Topological Sort:
-    We use dfs and output the REVERSE of finishing times(when aux==NULL) of vertices
+    -> We use dfs and output the REVERSE of finishing times(when aux==NULL) of vertices
 obs: It only works with Directed Acyclic Graphs[DAG] (we can prove cycle with the same dfs);
 */
 
