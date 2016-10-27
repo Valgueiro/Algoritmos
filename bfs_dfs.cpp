@@ -13,7 +13,7 @@ struct node{
 node* adj[201];
 vi mkd;
 
-void bfs(int v){
+void bfs(int v){//i'll always mark a vertice in the shortest path
     queue<int> q;
     mkd[v] = 1;
     q.push(v);
@@ -30,20 +30,26 @@ void bfs(int v){
     }
 }
 
-void dfs(int v){
+
+void dfs(int v){//better to Edge classification, find cycles and Topological sort
     mkd[v] = 1;
     node* aux = adj[v];
     while(aux!=NULL){
         if(!mkd[aux->value]){
             dfs(aux->value);
         }else{
-            //Aresta de retorno
+            //Aresta de retorno[Backward edge] -> means we have a cycle
         }
         aux = aux->next;
     }
 }
 
-//Fazer a matriz de adjacencias
+/*Topological Sort:
+    We use dfs and output the REVERSE of finishing times(when aux==NULL) of vertices
+obs: It only works with Directed Acyclic Graphs[DAG] (we can prove cycle with the same dfs);
+*/
+
+//how to do an Adjacency list:
 void insert(int v1, int v2){
 	aux = adj[v1];
 	if(aux!=NULL){
