@@ -1,3 +1,9 @@
+/*
+	Mateus Valgueiro Teixeira
+ Graduando em Engenharia da Computação - CIn/UFPE
+             mvt@cin.ufpe.br
+*/
+
 #include <bits/stdc++.h>
 #define weight first
 #define value second
